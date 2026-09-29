@@ -1,3 +1,4 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>Nura Teethcare Investment Memo</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -129,6 +130,19 @@
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--text-muted);
+  }
+  .av-masthead-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .av-doc-date {
+    font-family: 'Barlow', sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
+    margin-top: 3px;
   }
 
   /* ── Memo header ── */
@@ -362,6 +376,56 @@
   }
   .assess-col ul li { margin-bottom: 8px; }
 
+  /* ── Risks & mitigations ── */
+  .mitigation-list { display: grid; gap: 12px; margin: 16px 0 0; }
+  .mitigation {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 16px 20px;
+    display: grid;
+    gap: 10px;
+    min-width: 0;
+  }
+  .mitigation-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 8px 16px;
+    flex-wrap: wrap;
+  }
+  .mitigation-risk {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text);
+  }
+  .residual {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: 3px;
+    white-space: nowrap;
+  }
+  .residual.low { background: var(--green-bg); color: var(--green); }
+  .residual.mid { background: var(--accent-bg); color: var(--accent-text); }
+  .residual.open { background: var(--red-bg); color: var(--red); }
+  .mitigation-row { display: grid; grid-template-columns: 120px 1fr; gap: 4px 16px; }
+  @media (max-width: 560px) { .mitigation-row { grid-template-columns: 1fr; } }
+  .mitigation-label {
+    font-family: 'Barlow', sans-serif;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    padding-top: 3px;
+  }
+  .mitigation-row p { font-size: 13.5px; line-height: 1.6; margin: 0; max-width: none; }
+
   /* ── Team ── */
   .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin: 16px 0; }
   .team-card {
@@ -492,7 +556,10 @@
   <!-- ── Assembly Ventures Masthead ── -->
   <div class="av-masthead">
     <div class="av-wordmark">Assembly Ventures</div>
-    <div class="av-doc-type">Investment Memorandum</div>
+    <div class="av-masthead-right">
+      <div class="av-doc-type">Investment Memorandum</div>
+      <div class="av-doc-date">September 2026</div>
+    </div>
   </div>
 
   <!-- ── Memo Header ── -->
@@ -508,9 +575,7 @@
       <span><strong>Committed</strong> £130k</span>
       <span><strong>Remaining</strong> £120k</span>
       <span><strong>Min. Ticket</strong> £10k (non-voting) / £40k (voting)</span>
-      <span><strong>Lead</strong> None confirmed</span>
       <span><strong>Close</strong> End of October 2026</span>
-      <span><strong>Date</strong> September 2026</span>
     </div>
   </div>
 
@@ -528,7 +593,7 @@
       <div class="verdict-value">Medium</div>
     </div>
     <div class="verdict-summary">
-      Nura has built a genuinely differentiated product — patented, university-validated, clinically proven to outperform fluoride — and scaled it to £700k annualised with just £200k invested. Unit economics are unusually strong for 14 months in. The risks are a full entry valuation, a 2-founder team yet to prove the subscription model, and an inventory track record that has caused dips. For EIS-eligible angels with patience, the science and economics justify a small ticket.
+      Nura has built a genuinely differentiated product — patented, university-validated, clinically proven to outperform fluoride — and scaled it to £700k annualised with just £200k invested. Unit economics are unusually strong for 14 months in. The risks are a full entry valuation, a 2-founder team yet to prove the subscription model. For EIS-eligible angels with patience, the science and economics justify a small ticket.
     </div>
   </div>
 
@@ -543,8 +608,8 @@
       <div class="stat-label">Gross Margin (single tube)</div>
     </div>
     <div class="stat-cell">
-      <div class="stat-num highlight">CM3+</div>
-      <div class="stat-label">Positive Unit Economics</div>
+      <div class="stat-num highlight">Profitable</div>
+      <div class="stat-label">First-order profit after acquisition cost</div>
     </div>
     <div class="stat-cell">
       <div class="stat-num">35%</div>
@@ -565,7 +630,7 @@
     <div class="section-eyebrow">01 · Executive Summary</div>
     <h2>Science Beats Incumbents Who Stopped Trying</h2>
     <p>Nura Teethcare is a UK-based premium oral care brand built on a clinically validated, patent-pending formula: the world's highest concentration dual-hydroxyapatite toothpaste (7% nano-HAP + 5% biomimetic micro-HAP), proven in-vitro to repair enamel over 2× more effectively than fluoride. The product was developed in partnership with Professor Andrei Ionescu at the University of Milan — one of the world's leading researchers in dental biomaterials — and positions Nura as the science-led authority in a category defined by 75 years of stagnation from three dominant incumbents.</p>
-    <p>Founded in June 2025, Nura scaled to £51k monthly revenue in July 2026 — £700k annualised — built with just £200k of invested capital. Gross margins of 77% on the flagship product and CM3-positive unit economics from the outset signal a fundamentally sound model. This £250k raise, structured as a priced round via ASA, will fund performance marketing scale, inventory unlock, early UK retail entry, and two new product launches. £130k is already committed, with close targeted for end of October 2026. All remaining capacity is EIS eligible with HMRC Advance Assurance confirmed.</p>
+    <p>Founded in June 2025, Nura scaled to £51k monthly revenue in July 2026 — £700k annualised — built with just £200k of invested capital. Gross margins of 77% on the flagship product and profitability on the first order from the outset signal a fundamentally sound model. This £250k raise, structured as a priced round via ASA, will fund performance marketing scale, inventory unlock, early UK retail entry, and two new product launches. £130k is already committed, with close targeted for end of October 2026. All remaining capacity is EIS eligible with HMRC Advance Assurance confirmed.</p>
   </div>
 
   <hr class="divider">
@@ -644,8 +709,8 @@
   <!-- ── 05 Unit Economics ── -->
   <div class="section">
     <div class="section-eyebrow">05 · Unit Economics</div>
-    <h2>CM3-Positive from Month One</h2>
-    <p>Based on January 2026 data (peak trading month, ROAS 3.2):</p>
+    <h2>Profitable on the First Order, from Month One</h2>
+    <p>Based on January 2026 data (peak trading month, ad return 3.2×):</p>
 
     <div class="evidence-grid">
       <div class="evidence-card">
@@ -654,7 +719,7 @@
       </div>
       <div class="evidence-card">
         <div class="big">£25.80</div>
-        <div class="desc">CM2 per order</div>
+        <div class="desc">Profit per order after fulfilment costs</div>
       </div>
       <div class="evidence-card">
         <div class="big">£20.08</div>
@@ -662,7 +727,7 @@
       </div>
       <div class="evidence-card">
         <div class="big">£5.72</div>
-        <div class="desc">CM3 per order (13% margin)</div>
+        <div class="desc">Profit per first order after acquisition cost (13% margin)</div>
       </div>
       <div class="evidence-card">
         <div class="big">2.3×</div>
@@ -674,10 +739,10 @@
       </div>
     </div>
 
-    <p>CM3 positivity from first purchase is the key signal: Nura recovers its acquisition cost on the first order, making every repeat purchase incremental margin. The LTV thesis improves materially with each additional order: at 2.65 avg orders the LTV:CAC reaches 4.8×; at 3.95 orders it reaches 7.1×. The subscription model — not yet launched — is the primary mechanism to drive average order count above current levels.</p>
+    <p>Being profitable on the first order is the key signal: Nura recovers its full acquisition cost before a customer even comes back, which means every repeat purchase is pure incremental profit. The returns improve significantly with each additional order: at 2.65 orders per customer the lifetime return reaches 4.8× acquisition cost; at 3.95 orders it reaches 7.1×. The subscription model — not yet launched — is the primary mechanism to push order frequency higher.</p>
 
     <div class="callout">
-      <p><strong>Honest commentary:</strong> The CM3 figure of 13% is meaningful but slim. ROAS has varied from 1.9 (October 2025, inventory disruption) to 3.6 (March 2026), and the blended ROAS since launch is 2.6×. The Feb and Apr 2026 revenue dips (−27% and −17% MoM) were inventory-constrained, not demand-constrained — the team explicitly cut ad spend to avoid stockouts. The story is credible but investors should verify inventory management has been addressed with this raise before committing.</p>
+      <p>The first-order profit margin of 13% is meaningful but slim. Ad return (revenue per £1 of ad spend) has varied from 1.9× (October 2025, inventory disruption) to 3.6× (March 2026), with a blended average of 2.6× since launch. The Feb and Apr 2026 revenue dips (−27% and −17% MoM) were inventory-constrained, not demand-constrained — the team explicitly cut ad spend to avoid stockouts. The story is credible but investors should verify inventory management has been addressed with this raise before committing.</p>
     </div>
   </div>
 
@@ -778,7 +843,6 @@
         <tr><td>Raise Size</td><td>£250,000</td></tr>
         <tr><td>Pre-money Valuation</td><td>£4,500,000</td></tr>
         <tr><td>Minimum Ticket</td><td>£10,000 (non-voting shares) · £40,000 (voting shares)</td></tr>
-        <tr><td>Lead Investor</td><td>None confirmed</td></tr>
         <tr><td>Committed to Date</td><td>£130,000</td></tr>
         <tr><td>Remaining Capacity</td><td>£120,000</td></tr>
         <tr><td>EIS / SEIS</td><td>EIS eligible only — SEIS capacity has been filled. HMRC Advance Assurance confirmed.</td></tr>
@@ -842,32 +906,97 @@
 
   <hr class="divider">
 
-  <!-- ── 10 Bull vs Bear ── -->
+  <!-- ── 10 Investment Assessment ── -->
   <div class="section">
-    <div class="section-eyebrow">10 · Bull vs. Bear</div>
-    <h2>Honest Assessment</h2>
+    <div class="section-eyebrow">10 · Investment Assessment</div>
+    <h2>Balanced Assessment</h2>
     <div class="assessment">
       <div class="assess-col bull">
-        <h4>Bull Case</h4>
+        <h4>Why We&rsquo;d Back It</h4>
         <ul>
           <li><strong>Exceptional capital efficiency.</strong> £700k ARR from £200k invested. Most DTC consumer brands burn 3–5× this to reach similar revenue, with worse margins.</li>
           <li><strong>Real product differentiation.</strong> 12% dual-HAP, patented, university-validated, and independently endorsed by a senior clinical professional. This is not a branding exercise on commodity ingredients.</li>
-          <li><strong>CM3-positive from day one.</strong> The unit economics are structurally sound: acquisition cost recovered on first purchase, subscription upside not yet activated.</li>
+          <li><strong>Profitable on the first order from day one.</strong> The unit economics are structurally sound: acquisition cost recovered on first purchase, subscription upside not yet activated.</li>
           <li><strong>Category timing.</strong> HAP searches up 4×, oral care premiumisation at +12% YoY, incumbents constrained. The window is open and early movers will be hard to displace.</li>
           <li><strong>Proven US playbook via ADAI.</strong> The same distributor that scaled Boka to >$100m Amazon ARR is now Nura's US partner. This is a structural shortcut most early-stage brands don't have.</li>
           <li><strong>EIS at £4.5m pre.</strong> 30% tax relief effectively reduces entry to ~£3.15m pre for eligible investors — a material improvement to risk-adjusted returns.</li>
         </ul>
       </div>
       <div class="assess-col bear">
-        <h4>Bear Case</h4>
+        <h4>What to Watch</h4>
         <ul>
-          <li><strong>Full entry valuation.</strong> £4.5m pre on ~£700k ARR = 6.4× forward ARR. For a 2-founder business pre-subscription and pre-retail, this is a premium. Comparable early consumer raises have often been done at 3–5× ARR.</li>
-          <li><strong>Subscription model unproven.</strong> The LTV thesis — LTV:CAC of 4.8–7.1× — relies heavily on subscription launch. The current 35% cohort repeat rate is pre-subscription and encouraging, but LTV projections are aspirational without it.</li>
-          <li><strong>Thin team for the ambition.</strong> The 5-year roadmap — UK retail, US DTC, US retail, EU — is being executed by 2 founders with fractional support. No dedicated marketing hire planned in this raise. Founder capacity is the most material constraint on execution.</li>
-          <li><strong>Inventory fragility.</strong> Feb and Apr 2026 revenue dips were management-controlled cuts to avoid stockouts — but they reveal a supply chain that cannot yet flex with demand. This is a genuine operational risk at scale.</li>
-          <li><strong>No lead investor.</strong> No institutional or lead-angel signal. Increases due diligence burden for individual angels and limits syndicate credibility with future investors.</li>
+          <li><strong>Premium entry valuation.</strong> £4.5m pre on ~£700k ARR is 6.4× forward ARR, above the 3–5× often seen in early consumer raises. Management argues proven unit economics justify the premium (see mitigations below).</li>
+          <li><strong>Subscription not yet launched.</strong> The upper LTV scenarios depend on subscriptions. Historical data already supports a ~3.9× 12-month LTV:CAC floor, but the uplift from subscriptions is still to be demonstrated.</li>
+          <li><strong>Lean team for the ambition.</strong> The 5-year roadmap (UK retail, US DTC, US retail, EU) rests on 2 founders with fractional support. Founder capacity is the main execution constraint until key hires land.</li>
+          <li><strong>Past inventory constraints.</strong> Feb and Apr 2026 revenue dips came from deliberate cuts to avoid stockouts. The root cause (packaging lead times) has since been addressed, but the fix is untested at higher volumes.</li>
         </ul>
       </div>
+    </div>
+
+    <h3>Watch Points and Mitigations</h3>
+    <p>We put each watch point to the founders. Their responses are summarised below, with our view of how much risk remains. Claims marked for verification are based on material we have not yet reviewed.</p>
+    <div class="mitigation-list">
+
+      <div class="mitigation">
+        <div class="mitigation-head">
+          <div class="mitigation-risk">Premium entry valuation</div>
+          <span class="residual mid">Partly mitigated</span>
+        </div>
+        <div class="mitigation-row">
+          <div class="mitigation-label">Founders</div>
+          <p>An independent advisor prepared a valuation view, now in the data room. The founders say peers in oral care and wellness consumables run net-new CACs 1.5–2× higher relative to price (33–50% lower ROAS), often with negative acquisition margins despite having dedicated marketing staff. Nura is already first-order profitable, with a 10% COGS reduction locked in and upside still to come from subscriptions and marketing resource.</p>
+        </div>
+        <div class="mitigation-row">
+          <div class="mitigation-label">Our view</div>
+          <p>A fair argument. Paying up for proven unit economics is more defensible than paying up for demand alone, and 30% EIS relief brings the effective entry to ~£3.15m pre. The multiple is still above typical comparables. Review the advisor's memo in the data room.</p>
+        </div>
+      </div>
+
+      <div class="mitigation">
+        <div class="mitigation-head">
+          <div class="mitigation-risk">Subscription not yet launched</div>
+          <span class="residual mid">Partly mitigated</span>
+        </div>
+        <div class="mitigation-row">
+          <div class="mitigation-label">Founders</div>
+          <p>Historical 12-month LTV is already ~£75 inc. VAT (~£62.50 ex. VAT). Subscription data from other consumables shows a 1.5–5× LTV uplift, with most brands at 2–3×. Taking the conservative 2× and an NCAC of £32 gives a 3.9× 12-month LTV:CAC, which the founders treat as a floor. Their 24-month scenarios run 3.1× to 7.1×, with further upside from email, retention, referrals and the kids' range.</p>
+        </div>
+        <div class="mitigation-row">
+          <div class="mitigation-label">Our view</div>
+          <p>The thesis now rests on observed data plus a conservative uplift assumption, which is stronger than it first appeared. The £32 NCAC is more cautious than the £20.08 January figure, which helps. The 2× uplift is still an assumption until subscriptions are live. Verify the 12-month cohort export the founders have supplied.</p>
+        </div>
+      </div>
+
+      <div class="mitigation">
+        <div class="mitigation-head">
+          <div class="mitigation-risk">Lean team for the ambition</div>
+          <span class="residual mid">Partly mitigated</span>
+        </div>
+        <div class="mitigation-row">
+          <div class="mitigation-label">Founders</div>
+          <p>Fractional resource (initially £2k/month in the financial model) is a deliberate choice to find the right person without the risk of a bad hire. The question is how resource is contracted, not whether it exists. If the right person appears sooner and the value case holds, they will bring them on full-time ahead of the plan.</p>
+        </div>
+        <div class="mitigation-row">
+          <div class="mitigation-label">Our view</div>
+          <p>A sensible, capital-efficient approach at this stage, and the founders accepted the deck understated it. Execution still depends heavily on two people until hires are made. Ask what milestone would trigger the first full-time marketing hire.</p>
+        </div>
+      </div>
+
+      <div class="mitigation">
+        <div class="mitigation-head">
+          <div class="mitigation-risk">Past inventory constraints</div>
+          <span class="residual low">Largely mitigated</span>
+        </div>
+        <div class="mitigation-row">
+          <div class="mitigation-label">Founders</div>
+          <p>The bottleneck was packaging lead times, not finished goods. Nura now forward-buys packaging and holds it at the factory, so its Swiss contract manufacturer can respond faster to new orders. The founders say the current supply chain can scale to at least 20× today's volumes.</p>
+        </div>
+        <div class="mitigation-row">
+          <div class="mitigation-label">Our view</div>
+          <p>A specific root cause and a concrete fix, backed by a contingency allocation in this raise. The 20× capacity claim should be confirmed with the manufacturer's terms or minimum order quantities.</p>
+        </div>
+      </div>
+
     </div>
   </div>
 
@@ -878,7 +1007,7 @@
     <div class="section-eyebrow">11 · Analyst Conclusion</div>
     <h2>Verdict: Back at Small Ticket, EIS Essential</h2>
     <p>Nura has done something genuinely difficult: it built a product with real scientific IP, validated it independently, priced it at premium, and scaled to meaningful revenue with minimal capital. The unit economics at 14 months in — 68% GM ex. VAT, CM3-positive on first purchase, ROAS 2.5–3.2× — are the kind of numbers that consumer brand investors spend years waiting to see. The Boka comparison is not vanity; it is structural. The same US distributor, the same category dynamic, a potentially superior product on enamel science. Bryce Vielguth — the person who actually built Boka — has said in writing that Nura's early metrics are better.</p>
-    <p>The risks are real and should be priced in. The entry valuation of £4.5m pre-money is full for the stage: no subscription launched, no retail revenue, no US traction yet, and 2 founders managing the entire operation. The inventory management story requires scrutiny — the Feb/Apr 2026 dips were explained but not resolved. Management's Y2 projection of £2.77m requires 4× growth from today with £250k of new capital, which is ambitious. The absence of a lead investor means this round has no external signal of institutional quality.</p>
+    <p>The risks are real, though the founders' responses narrow several of them. The entry valuation of £4.5m pre-money is a premium for the stage, which management justifies with unit economics that peers have not matched. The LTV thesis now rests on a ~3.9× floor from historical data rather than on subscriptions alone, and the inventory dips of Feb/Apr 2026 have a specific cause (packaging lead times) and a fix in place. Management's Y2 projection of £2.77m still requires 4× growth from today with £250k of new capital, which is ambitious.</p>
     <p>For EIS-eligible angels with appetite for early-stage consumer risk, the effective entry at ~£3.15m pre (after 30% EIS relief) and the structural quality of the product and economics make this worth a small ticket. Investors should request the 18-month MoM cashflow model, probe the subscription launch timeline and inventory management plan, and understand the path to Series A before committing. This is not a safe bet — it is a well-backed early-stage consumer play in a category with generational tailwinds.</p>
   </div>
 
@@ -894,3 +1023,6 @@
   </div>
 
 </div>
+
+
+</body></html>
